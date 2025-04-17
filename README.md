@@ -57,7 +57,7 @@ A Full Stack Book Review Platform where users can browse books, submit reviews, 
 ![Home Page](/screenshots/book_main.png)
 
 ### Book Listing Page
-![Book Listing](/screenshots/book_main.png)
+![Book Listing](/screenshots/book_Home.png)
 
 ### Book Details + Review (Admin)
 ![Book Details](/screenshots/book_details_admin.png)
