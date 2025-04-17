@@ -9,7 +9,7 @@ A Full Stack Book Review Platform where users can browse books, submit reviews, 
 - 📚 Home page with featured books
 - 🔍 Book listing page with search and filter functionality
 - 📖 Individual book page displaying book details and user reviews
-- 🧑‍💻 User profile page showing read books and submitted reviews
+- 🧑‍💻 User profile page showing read books and submitted reviews,can download the pdf
 - ✍️ Review submission form
 - ⚡ Responsive design and smooth user experience
 - 🔁 State management using Redux
@@ -18,12 +18,12 @@ A Full Stack Book Review Platform where users can browse books, submit reviews, 
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- **Frontend:** React, Redux, React Router, Axios
+- **Frontend:** React, React Router, Redux, Toastify
 - **Backend:** Node.js, Express.js
-- **Database:** MongoDB with Mongoose ODM
-- **Other Tools:** Git, Postman, VS Code
+- **Database:** MongoDB
+- **Others:** Mongoose, JWT Authentication, Axios, bcrypt, dotenv,Multer
 
 ---
 
@@ -37,7 +37,7 @@ A Full Stack Book Review Platform where users can browse books, submit reviews, 
 | GET    | `/reviews?bookId=ID`    | Retrieve reviews for a book         |
 | POST   | `/reviews`              | Submit a new review                 |
 | GET    | `/users/:id`            | Retrieve user profile               |
-| PUT    | `/users/:id`            | Update user profile                 |
+| POST    | `/users/:id`            | Update user profile                 |
 
 ---
 
@@ -46,7 +46,7 @@ A Full Stack Book Review Platform where users can browse books, submit reviews, 
 - Users can register, login, and submit reviews.
 - Admin can upload books and manage the library.
 - Each review links to both the user and the book via ObjectIds.
-- Book schema maintains an array of associated reviews.
+- Book schema maintains an array of associated reviews and by whom.
 
 ---
 
@@ -78,47 +78,46 @@ A Full Stack Book Review Platform where users can browse books, submit reviews, 
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/your-username/book-review-platform.git
+git clone https://github.com/Gopaladas/Book_review
 ```
 
-2. **Navigate to backend and frontend folders**
+2. **Navigate to Book_Review -> cilent(frontend) and server(Backend)**
 ```bash
-cd book-review-platform/backend
+cd client
 npm install
-cd ../frontend
+cd ../server
 npm install
 ```
 
 3. **Configure Environment Variables**
 
-Create `.env` files in both `backend/` and `frontend/`:
+Create `.env` files in server:
 
 **Backend .env:**
 ```
-MONGODB_URI=your_mongodb_connection_string
-PORT=5000
+MONGODB_URI="mongodb+srv://sreevan:sreevan@cluster0.qd723iv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+JWT_SECRET='secrett#xt'
+NODE_ENV = 'development'
+PORT=4000
 ```
 
-**Frontend .env:**
-```
-REACT_APP_API_URL=http://localhost:5000
-```
+
 
 4. **Run the application**
 
 In two terminals:
 ```bash
-cd backend && npm start
+cd client && npm run dev
 ```
 ```bash
-cd frontend && npm start
+cd server && npm run server
 ```
 
 ---
 
 ## Live Demo
 
-[Visit Live Demo](https://your-live-demo-url.com)
+
 
 ---
 
@@ -135,7 +134,7 @@ cd frontend && npm start
 ## Author
 
 **Pavankumar**  
-[LinkedIn](https://linkedin.com/in/your-profile) | [Portfolio](https://your-portfolio-url.com)
+[LinkedIn](linkedin.com/in/gopaladas-pavankumar-a5a3b8255)
 
 ---
 
