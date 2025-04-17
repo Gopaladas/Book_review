@@ -55,7 +55,7 @@ A Full Stack Book Review Platform where users can browse books, submit reviews, 
 > Replace `assets/screenshots/...` with your local image paths or uploaded image links.
 
 ### Home Page
-![Home Page](assets/screenshots/home.png)
+![Home Page](/screenshots/book_Home.png)
 
 ### Book Listing Page
 ![Book Listing](assets/screenshots/book-listing.png)
