@@ -31,20 +31,19 @@ A Full Stack Book Review Platform where users can browse books, submit reviews, 
 
 | Method | Endpoint                | Description                         |
 |--------|--------------------------|-------------------------------------|
-| GET    | `/books`                | Retrieve all books (with pagination) |
-| GET    | `/books/:id`            | Retrieve a specific book            |
-| POST   | `/books`                | Add a new book (admin only)         |
-| GET    | `/reviews?bookId=ID`    | Retrieve reviews for a book         |
-| POST   | `/reviews`              | Submit a new review                 |
-| GET    | `/users/:id`            | Retrieve user profile               |
-| POST    | `/users/:id`            | Update user profile                 |
+| GET    | `/bookData`              | Retrieve all books (with pagination) |
+| GET    | `/bookdetails/:bookId`  | Retrieve a specific book            |
+| POST   | `/upload`                | Add a new book (admin only)         |
+| POST   | `/review/:bookId`       | Submit a new review                 |
+| GET    | `/data`                 | Retrieve user profile               |
+| POST    | `/updateProfile`       | Update user profile                 |
 
 ---
 
 ## Database Design
 
 - Users can register, login, and submit reviews.
-- Admin can upload books and manage the library.
+- Admin can upload and delete books and manage the library.
 - Each review links to both the user and the book via ObjectIds.
 - Book schema maintains an array of associated reviews and by whom.
 
@@ -55,22 +54,30 @@ A Full Stack Book Review Platform where users can browse books, submit reviews, 
 > Replace `assets/screenshots/...` with your local image paths or uploaded image links.
 
 ### Home Page
-![Home Page](/screenshots/book_Home.png)
+![Home Page](/screenshots/book_main.png)
 
 ### Book Listing Page
-![Book Listing](assets/screenshots/book-listing.png)
+![Book Listing](/screenshots/book_main.png)
 
-### Book Details + Reviews
-![Book Details](assets/screenshots/book-details.png)
+### Book Details + Review (Admin)
+![Book Details](/screenshots/book_details_admin.png)
 
-### User Profile
-![User Profile](assets/screenshots/user-profile.png)
+### Book Details + Review (User)
+![Book Details](/screenshots/book_details_user.png)
 
 ### Review Submission
-![Submit Review](assets/screenshots/review-form.png)
+![Submit Review](/screenshots/book_review.png)
 
 ### Admin - Add New Book
-![Admin Panel](assets/screenshots/admin-add-book.png)
+![Admin Panel](/screenshots/book_admin_upload.png)
+
+### Profile update 
+![Profile Update](/screenshots/book_update.png)
+
+### User Profile
+![User profile](/screenshots/book_user.png)
+
+
 
 ---
 
