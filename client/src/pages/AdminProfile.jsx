@@ -24,6 +24,8 @@ const AdminProfile = ({ adminId }) => {
         setAdminData(res.data.adminData);
         return res.data.adminData;
       }
+      console.log("admin data", res);
+
     } catch (error) {
       console.error("Error fetching admin data:", error);
     }
