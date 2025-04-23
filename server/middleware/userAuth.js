@@ -9,7 +9,7 @@ const userAuth = async (req,res,next)=>{
 
     try {
         const tokenDecode = jwt.verify(token,process.env.JWT_SECRET);
-
+        console.log(tokenDecode.id);
         if(tokenDecode.id){
             req.userId = tokenDecode.id;
         }else{
