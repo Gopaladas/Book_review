@@ -105,7 +105,7 @@ Create `.env` files in server:
 
 **Backend .env:**
 ```
-MONGODB_URI="mongodb+srv://sreevan:sreevan@cluster0.qd723iv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+MONGODB_URI="mongodb+srv://<>:<>@cluster0.qd723iv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 JWT_SECRET='secrett#xt'
 NODE_ENV = 'development'
 PORT=4000
