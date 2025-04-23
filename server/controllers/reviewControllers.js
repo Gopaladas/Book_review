@@ -5,7 +5,8 @@ import userModel from "../models/userMode.js";
 
 const review = async (req, res) => {
   const { bookId } = req.params;
-  const { userId, rating, reviewText } = req.body;
+  const {  rating, reviewText } = req.body;
+  const userId = req.userId;
 
   if (!rating || !reviewText) {
     return res.json({ success: false, messsage: "Enter the fields" });
