@@ -35,11 +35,16 @@ const App = () => {
         <Route path="/book/:id" element={<BookDetails />} />
 
         {/* user routes */}
-        {userData?.isAdmin !== true ? (
-          <Route path="/profile" element={<UserProfile />} />
-        ) : (
-          <Route path="/profile" element={<AdminProfile />} />
-        )}
+        {userData ? (
+          userData?.isAdmin !== true ? (
+    <Route path="/profile" element={<UserProfile />} />
+  ) : (
+    <Route path="/profile" element={<AdminProfile />} />
+  )
+) : (
+  <Route path="/profile" element={<Login />} />
+)}
+
 
         {/* admin routes */}
 
