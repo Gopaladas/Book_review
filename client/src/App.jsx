@@ -16,7 +16,7 @@ import Navbar from "./components/Navbar";
 
 const App = () => {
   const { userData } = useSelector((state) => state.auth);
-  console.log(userData);
+  console.log("Hi",userData);
   return (
     <div>
       {/* <Navbar/> */}
