@@ -114,7 +114,7 @@ const uploadBook = async (req, res) => {
     const coverImagePath = req.files["coverImage"][0].path;
     const pdfFilePath = req.files["pdfFile"][0].path;
 
-    const { userId } = req.body;
+    const  userId  = req.userId;
 
     const newBook = new Book({
       title,
@@ -154,7 +154,7 @@ const uploadBook = async (req, res) => {
 
 const deleteBook = async (req, res) => {
   const { bookId } = req.params;
-  const { userId } = req.body;
+  const  userId  = req.userId;
 
   try {
     const bookExist = await Book.findById({ _id: bookId });
@@ -189,8 +189,8 @@ const deleteBook = async (req, res) => {
 
 const getAdminData = async (req, res) => {
   try {
-    const { userId } = req.body;
-    // console.log(userId);
+    const  userId  = req.userId;
+     console.log(userId);
     if (!userId) {
       return res.json({ success: false, message: "Admin ID is required" });
     }
