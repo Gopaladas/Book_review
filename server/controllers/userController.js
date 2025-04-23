@@ -4,7 +4,8 @@ import path from "path";
 import fs from "fs";
 const getUserData = async (req, res) => {
   try {
-    const { userId } = req.body;
+    // const { userId } = req.body;
+    const userId = req.userId;
     // console.log(userId);
     const user = await userModel
       .findById(userId)
@@ -44,8 +45,8 @@ const getUserData = async (req, res) => {
 };
 
 const updateUser = async (req, res) => {
-  const { userId, name, email } = req.body;
-
+  const {  name, email } = req.body;
+  const userId = req.userId;
   if (!name || !email) {
     return res.json({ success: false, message: "Enter the fields" });
   }
@@ -77,7 +78,7 @@ const updateUser = async (req, res) => {
 const downloadBook = async (req, res) => {
   try {
     const { bookId } = req.params;
-    const { userId } = req.body;
+    const  userId  = req.userId;
 
     const user = await userModel.findById({ _id: userId });
 
